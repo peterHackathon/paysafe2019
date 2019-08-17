@@ -121,8 +121,7 @@ public class HomeController {
 			for (Category c : catList) {
 				if (c.getType().indexOf("Income") > -1) {
 					catListIncome.add(c);
-				}
-				else {
+				} else {
 					catListExpence.add(c);
 				}
 			}
@@ -331,8 +330,7 @@ public class HomeController {
 		File serverFile = new File(imgLocation + imageName + "." + extension);
 		if (serverFile.exists()) {
 			return Files.readAllBytes(serverFile.toPath());
-		}
-		else {
+		} else {
 			return new byte[] {};
 		}
 	}
@@ -343,7 +341,8 @@ class UserPoint {
 	public float y;
 	public String color;
 
-	public UserPoint() {}
+	public UserPoint() {
+	}
 
 	public UserPoint(int x, int y, String color) {
 		this.x = x;

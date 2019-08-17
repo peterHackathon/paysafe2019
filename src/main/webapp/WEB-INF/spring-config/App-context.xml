@@ -9,8 +9,6 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
-	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
@@ -24,8 +22,6 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.app.walletbuddy" />
-	 
-	 
 	
 	<beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -33,7 +29,6 @@
 		<beans:property name="username"  value="root"/>
 		<beans:property name="password"  value="root"/>
 	</beans:bean>
-	
 	
 	<beans:bean id="hibernate3AnnotatedSessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
@@ -54,7 +49,6 @@
 		</beans:property>
 	</beans:bean>
 	
- 	
 	<beans:bean id="userClusteringDataDAO" class="com.app.walletbuddy.dao.UserClusteringDataDAOImpl"> 
 		<beans:property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
 	</beans:bean>
@@ -68,7 +62,6 @@
 		<beans:property name="categoryService" ref="categoryService" />
 	</beans:bean>
 	
-
 	<beans:bean id="categoryDAO" class="com.app.walletbuddy.dao.CategoryDAOImpl"> 
 		<beans:property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
 	</beans:bean>
@@ -78,7 +71,6 @@
 		<beans:property name="transactionDAO" ref="transactionDAO" />
 	</beans:bean>
 	
-	
 	<beans:bean id="categoryImageDAO" class="com.app.walletbuddy.dao.CategoryImageDAOImpl"> 
 		<beans:property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
 	</beans:bean>
@@ -86,7 +78,6 @@
 	<beans:bean id="categoryImageService" class="com.app.walletbuddy.service.CategoryImageServiceImpl">
 		<beans:property name="categoryImageDAO" ref="categoryImageDAO" />
 	</beans:bean>
-
 
 	<beans:bean id="transactionDAO" class="com.app.walletbuddy.dao.TransactionDAOImpl"> 
 		<beans:property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
@@ -97,8 +88,6 @@
 		<beans:property name="userDAO" ref="userDAO" />
 		<beans:property name="userClusteringDataDAO" ref="userClusteringDataDAO" />
 	</beans:bean>
-	
-	
 	
 	<beans:bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -111,6 +100,5 @@
 	<beans:bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<beans:property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
 	</beans:bean>
-	
 	
 </beans:beans>

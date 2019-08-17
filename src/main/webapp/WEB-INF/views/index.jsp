@@ -106,7 +106,7 @@
 							<article
 								class="child-textWrap js_transformScaleY js_getTranslateY">
 								<h1 class="child-logo"
-									style="color: white; font-size: 72px; font-weight: bold">WalletBuddy</h1>
+									style="color: white; font-size: 72px; font-weight: bold"><span style="color: blue;">Paysafe: </span>WalletBuddy</h1>
 								<p class="child-paragraph"
 									style="color: white; font-size: 38px;">See Where, Why and How your money
 									goes..</p>
@@ -710,7 +710,7 @@
 							<header class="child-header js_transformScaleY">
 								<h2
 									style="color: rgb(64, 180, 229); font-weight: bold; font-size: 90px;">
-									Paysafe Hackathon 2019!
+									Paysafe:Hackathon 2019!
 									</h1>
 									<hr>
 							</header>
